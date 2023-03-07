@@ -8,6 +8,9 @@ if ($_GET['module']=='home') {
 }
 
 elseif ($_GET['module']=='m-user') {
-    echo "BAUBAUBAUBAU";
+    require("module/mod_users/users.php");
+}
+elseif ($_GET['module']=='m-module') {
+    echo "";
 }
 ?>
