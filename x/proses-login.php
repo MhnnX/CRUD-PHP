@@ -17,12 +17,13 @@ $db         = mysqli_fetch_array($proses);
 if ($user > 0) {
     session_start();
     $_SESSION['username']       = $db['Username'];
-    $_SESSION['namalengkap']    = $db['Nama_Lengkap'];
     $_SESSION['password']       = $db['Password'];
+    $_SESSION['fullname']       = $db['Full_Name'];
     $_SESSION['level']          = $db['Level'];
+    $_SESSION['blokir']         = $db['Blokir'];
 
     echo "<center>LOGIN BERHASIL <br></center>";
-    header("Location: dashboard.php?module=home");
+    header("Location: dash.php?module=home");
 } else {
     echo "<center>LOGIN GAGAL <br>
     Username atau Password Anda tidak valid.<br>

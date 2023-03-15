@@ -8,6 +8,7 @@ if ($_SESSION['level']=='Admin') {
 }
 
 while ($menu = mysqli_fetch_array($modul)) {
-    echo "<li><a href='$menu[Link]'>$menu[Nama_Modul]</a></li>";
+    // echo "<li><a href='$menu[Link]'>$menu[Nama_Modul]</a></li>";
+    echo "<li class='nav-item'><a class='nav-link text-dark' href='$menu[Link]'><span class='ml-2'>$menu[Nama_Modul]</span></a></li>";
 }
 ?>
